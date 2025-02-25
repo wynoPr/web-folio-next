@@ -17,16 +17,6 @@ interface Experience {
   img: string;
 }
 
-interface CV {
-  id: number;
-  created_at: number;
-  pp: string;
-  cv: string;
-  lang: Language[];
-  exp: Experience[];
-  img: string
-}
-
 export default async function CVPage() {
 
   const cvData = await getCV();
