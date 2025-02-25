@@ -1,0 +1,139 @@
+.cardWork {
+    background-color: #ef8888;
+    border-radius: 1.5vw;
+    width: 100%;
+    max-width: calc(20vw - 3vw);
+    aspect-ratio: 3/4;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    &_x2 {
+      @extend .cardWork;
+      aspect-ratio: 4/2;
+      margin-top: 20px;
+      max-width: calc(40vw - 3vw);
+    }
+    &_x5 {
+      @extend .cardWork;
+      aspect-ratio: 4/2;
+      margin-top: 20px;
+      max-width: calc(100vw - 3vw);
+    }
+    &_img {
+      height: 100%;
+      
+      object-fit: cover;
+    }
+    &_title {
+      position: absolute;
+      bottom: 0vw;
+      left: 0vw;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      text-align: end;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 1.5vw;
+      opacity: 0;
+      background: linear-gradient(
+        0deg,
+        rgba(255, 181, 72, 1) 0%,
+        rgba(238, 68, 67, 0.3) 40%,
+        rgba(255, 181, 72, 0.3) 100%
+      );
+      transition: 0.7s ease;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &_date {
+      position: absolute;
+      top: 0vw;
+      left: 0vw;
+      width: 100%;
+      padding: 1.5vw;
+      transition: 0.7s ease;
+      opacity: 0;
+    }
+  }
+  
+  .cardWork:hover {
+    scale: 1.05;
+    transition: 0.7s ease;
+  }
+  .cardWork:hover .cardWork_title {
+    opacity: 1;
+    transition: 0.7s ease;
+  }
+  .cardWork:hover .cardWork_date {
+    opacity: 1;
+    transition: 0.7s ease;
+  }
+  
+  .cardWork_x2 .cardWork_img {
+    height: auto;
+    width: 100%;
+  }
+  
+  @media (max-width: 840px) {
+    .cardWork {
+      background-color: #ef8888;
+      border-radius: 1.5vw;
+      width: 100%;
+      max-width: calc(50vw - 45px);
+      aspect-ratio: 3/4;
+      transition: 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      &_x2 {
+        aspect-ratio: 4/2;
+        margin-top: 20px;
+        max-width: calc(100vw - 80px);
+      }
+      &_img {
+        height: 100%;
+        object-fit: cover;
+      }
+      &_title {
+        position: absolute;
+        bottom: 0vw;
+        left: 0vw;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        text-align: end;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 1.5vw;
+        opacity: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(255, 181, 72, 1) 0%,
+          rgba(238, 68, 67, 0.3) 40%,
+          rgba(255, 181, 72, 0.3) 100%
+        );
+        transition: 0.7s ease;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &_date {
+        position: absolute;
+        top: 0vw;
+        left: 0vw;
+        width: 100%;
+        padding: 1.5vw;
+        transition: 0.7s ease;
+  
+        opacity: 0;
+      }
+    }
+  }
+  

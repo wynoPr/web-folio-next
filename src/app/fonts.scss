@@ -1,0 +1,431 @@
+@font-face {
+    font-family: "CocoClasssy";
+    src: url("../assets/fonts/Coco/Cocogoose-Classic-ExtraBold.otf")
+      format("truetype");
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: "CocoClasssy";
+    src: url("../assets/fonts/Coco/Cocogoose-Classic-ExtraBold-Italic.otf")
+      format("truetype");
+    font-weight: 800;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-Semibold-BF63c0b4f77c081.otf")
+      format("truetype");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-SemiboldItalic-BF63c0b4f3cf0fa.otf")
+      format("truetype");
+    font-weight: 600;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-Medium-BF63c0b4f73b430.otf")
+      format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-MediumItalic-BF63c0b4f6ea643.otf")
+      format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-Regular-BF63c0b4f6f3806.otf")
+      format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Norm";
+    src: url("../assets/fonts/Norm/Norm-RegularItalic-BF63c0b4f769e92.otf")
+      format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Neutra";
+    src: url("../assets/fonts/Neutra/NeutraText-BookAlt.otf") format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Neutra";
+    src: url("../assets/fonts/Neutra/NeutraText-BookItalicAlt.otf")
+      format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  //Fuentes
+  
+  .hl {
+    font-family: "CocoClasssy";
+    font-weight: 800;
+    font-size: 94px;
+    color: #2d2a26;
+    line-height: 80px;
+  }
+  .h1 {
+    font-family: "CocoClasssy";
+    font-weight: 800;
+    font-size: xx-large;
+    color: #2d2a26;
+  }
+  .h2 {
+    font-family: "Norm";
+    font-weight: 600;
+    font-size: x-large;
+    color: #2d2a26;
+  }
+  .h3 {
+    font-family: "Norm";
+    font-weight: 500;
+    font-size: larger;
+    color: #2d2a26;
+  }
+  .h4 {
+    font-family: "Norm";
+    font-weight: 400;
+    font-size: medium;
+    color: #2d2a26;
+    font-style: italic;
+  }
+  .p-b {
+    font-family: "Neutra";
+    font-weight: 400;
+    font-size: medium;
+    color: #2d2a26;
+    white-space: pre-line;
+  }
+  .p-s {
+    font-family: "Neutra";
+    font-weight: 400;
+    font-size: small;
+    color: #2d2a26;
+    white-space: pre-line;
+    
+  }
+  .f-tags {
+    font-family: "Norm";
+    font-weight: 400;
+    font-size: x-small;
+    color: #f8f8f8;
+    font-style: italic;
+  }
+  .f-reverse {
+    text-align: left;
+  }
+  .f-c {
+    text-align: center;
+  }
+  
+  .f-w {
+    color: #f8f8f8;
+  }
+  .f-danger {
+    color: #ee4443;
+  }
+  .f-faint {
+    color: #766e63;
+  }
+  .f-it {
+    font-style: italic;
+  }
+  .f-spicy {
+    font-family: "Norm", monospace;
+  }
+  .f-alt {
+    font-family: monospace;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .bg-w {
+    background-color: #f8f8f8;
+  }
+  .bg-n {
+    background-color: #f8f8f800;
+  }
+  
+  //bttns
+
+  .tag {
+    padding: 5px 10px;
+    border-radius: 30px;
+    background-color: #EE4443;
+}
+  
+  .link {
+    color: #2d2a26;
+    transition: transform 0.5s;
+    margin: 0 10px;
+    fill: #2d2a26;
+  }
+  .link:hover {
+    color: #ffb548;
+    fill: #ffb548;
+    transition: transform 0.5s;
+    transform: scale(1.05);
+  }
+
+  .btt {
+    padding: 10px 20px;
+    color: #f8f8f8;
+    background-color: #ffd292;
+    border-radius: 10px;
+  }
+  .btt.active {
+    background-color: #ee4443;
+  }
+  .btt:hover {
+    background-color: #ffb548;
+  }
+
+  .btt_round{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    color: #2d2a26;
+    backdrop-filter: blur(10px);
+    background: rgba($color: #f8f8f8, $alpha: 0.5) ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+  }
+
+  .toggle {
+    position: relative;
+    height: 15px;
+    aspect-ratio: 2/1;
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    transition: background-color 0.25s ease-in;
+  }
+  .toggle::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 11px;
+    height: 11px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    transition: all 0.25s ease-out;
+  }
+  .toggle.active {
+    background-color: #ee4443;
+    transition: background-color 0.25s ease-in;
+  }
+  .toggle.active::after {
+    transform: translateX(15px);
+  }
+  .toggle_icon {
+    width: 100%;
+    background-color: #ffffff00;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .active {
+    color: #ee4443;
+    // background-color: #EE4443;
+  }
+  .active_bg {
+    color: #ee4443;
+    // background-color: #EE4443;
+  }
+  .active:hover {
+    color: #ee4443;
+    // background-color: #EE4443;
+  }
+  .icon {
+    height: 40px;
+    font-size: 40px;
+  }
+  
+  @media (max-width: 480px) {
+    .hl {
+      font-family: "CocoClasssy";
+      font-weight: 800;
+      font-size: 64px;
+      color: #2d2a26;
+      line-height: 80px;
+    }
+    .h1 {
+      font-family: "CocoClasssy";
+      font-weight: 800;
+      font-size: xx-large;
+      color: #2d2a26;
+    }
+    .h2 {
+      font-family: "Norm";
+      font-weight: 600;
+      font-size: larger;
+      color: #2d2a26;
+    }
+    .h3 {
+      font-family: "Norm";
+      font-weight: 500;
+      font-size: large;
+      color: #2d2a26;
+    }
+    .h4 {
+      font-family: "Norm";
+      font-weight: 400;
+      font-size: medium;
+      color: #2d2a26;
+      font-style: italic;
+    }
+    .p-b {
+      font-family: "Neutra";
+      font-weight: 400;
+      font-size: medium;
+      color: #2d2a26;
+    }
+    .p-s {
+      font-family: "Neutra";
+      font-weight: 400;
+      font-size: small;
+      color: #2d2a26;
+    }
+    .f-tags {
+      font-family: "Norm";
+      font-weight: 400;
+      font-size: small;
+      color: #f8f8f8;
+      font-style: italic;
+    }
+  
+    .f-reverse {
+      text-align: left;
+    }
+    .f-c {
+      text-align: center;
+    }
+  
+    .f-w {
+      color: #f8f8f8;
+    }
+    .f-faint {
+      color: #766e63;
+    }
+    .f-it {
+      font-style: italic;
+    }
+    .f-spicy {
+      font-family: "Norm", monospace;
+    }
+    .f-alt {
+      font-family: monospace;
+    }
+    .title {
+      margin-bottom: 40px;
+    }
+    .bg-w {
+      background-color: #f8f8f8;
+    }
+    .bg-n {
+      background-color: #f8f8f800;
+    }
+  
+    //bttns
+    
+    .link {
+      color: #2d2a26;
+      transition: transform 0.3s;
+      margin: 0 10px;
+      fill: #2d2a26;
+    }
+    .link:hover {
+      color: #2d2a26;
+      transition: transform 0.3s;
+      margin: 0 10px;
+      fill: #2d2a26;
+    }
+    .link:active {
+      color: #ffb548;
+      transition: transform 0.3s;
+      fill: #ffb548;
+      transform: scale(1.1);
+    }
+    .btt {
+      padding: 10px 20px;
+      color: #f8f8f8;
+      background-color: #ffd292;
+      border-radius: 10px;
+    }
+    .btt_active {
+      padding: 10px 20px;
+      color: #f8f8f8;
+      background-color: #ee4443;
+      border-radius: 10px;
+    }
+    .btt:hover {
+      background-color: #ffd292;
+    }
+    .btt:active {
+      background-color: #ffb548;
+    }
+    .toggle {
+      position: relative;
+      height: 15px;
+      aspect-ratio: 2/1;
+      border-radius: 10px;
+      background-color: #d9d9d9;
+      transition: background-color 0.25s ease-in;
+    }
+    .toggle::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 11px;
+      height: 11px;
+      background-color: #f8f8f8;
+      border-radius: 50%;
+      transition: all 0.25s ease-out;
+    }
+    .toggle.active {
+      background-color: #ee4443;
+      transition: background-color 0.25s ease-in;
+    }
+    .toggle.active::after {
+      transform: translateX(15px);
+    }
+    .toggle_icon {
+      width: 100%;
+      background-color: #ffffff00;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+  
+  
+  
+    .active {
+      color: #ee4443;
+      // background-color: #EE4443;
+    }
+    .active_bg {
+      color: #ee4443;
+      // background-color: #EE4443;
+    }
+    .active:hover {
+      color: #ee4443;
+      // background-color: #EE4443;
+    }
+  }
+  

@@ -1,0 +1,449 @@
+* {
+    scroll-behavior: smooth;
+}
+
+.cv {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    &_head {
+        width: 100%;
+        max-width: 1240px;
+        position: relative;
+
+        padding: 40px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        animation: Up 2s ease-out forwards;
+
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        &_p {
+            width: 40%;
+            margin: 0 30%;
+            animation: Up 2s ease-out forwards;
+            animation-delay: 0.5s;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        img {
+            position: absolute;
+            right: 40px;
+            top: 80px;
+        }
+
+        &_ph {
+            width: 55%;
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+
+        &_pq {
+            width: 30%;
+            margin-left: calc(70% - 360px);
+            margin-right: 360px;
+            text-align: right;
+        }
+
+    }
+
+    @keyframes Up {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &_nav {
+        width: calc(30% - 20px);
+        height: 80vh;
+        background-color: #FBF1E9;
+
+        position: sticky;
+        top: 40px;
+
+        border-radius: 1.5vw;
+        padding: 40px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        a {
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0px;
+        }
+    }
+
+    &_cont {
+        width: calc(70% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px
+    }
+
+    &_art {
+        width: 100%;
+        background-color: #FBF1E9;
+        border-radius: 1.5vw;
+
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        &_row {
+            width: 100%;
+            background-color: #FBF1E9;
+            border-radius: 1.5vw;
+
+            padding: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        ul {
+            width: 90%;
+            margin-left: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 10px;
+
+            li.h3 {
+                width: 75%;
+            }
+
+            li.h4 {
+                width: 25%;
+                text-align: right;
+            }
+        }
+    }
+
+    &_expcard {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            height: 130px;
+            width: 130px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        div {
+            width: calc(100% - 150px);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+
+            h3 {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+    }
+
+    &_langcard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 120px;
+
+        img {
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width: 840px) {
+    .cv {
+        gap: 20px;
+
+        &_head {
+            flex-direction: row-reverse;
+            padding: 0;
+
+            &_p {
+                width: 40%;
+                margin: 0 30%;
+                animation: Up 2s ease-out forwards;
+                animation-delay: 0.5s;
+                text-align: center;
+            }
+
+            img {
+                position: static;
+                width: 210px;
+                height: 280px;
+            }
+
+            &_ph {
+                width: calc(100% - 250px);
+                margin-bottom: 40px;
+            }
+
+            &_pq {
+                width: 60%;
+                margin-left: 0;
+                margin-right: 0px;
+            }
+
+        }
+
+        &_nav {
+            width: calc(40% - 10px);
+
+            border-radius: 1.5vw;
+            padding: 20px;
+        }
+
+        &_cont {
+            width: calc(60% - 10px);
+            gap: 20px
+        }
+
+        &_art {
+            padding: 20px;
+            gap: 20px;
+
+            &_row {
+                padding: 20px;
+                gap: 20px;
+
+            }
+
+
+
+            h1 {
+                margin-bottom: 0px;
+                width: 100%;
+            }
+
+            ul {
+                width: 90%;
+                margin-left: 10%;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 10px;
+
+                li.h3 {
+                    width: 100%;
+                }
+
+                li.h4 {
+                    width: 100%;
+                    text-align: right;
+                    position: relative;
+                    top: -15px
+                }
+            }
+        }
+
+        &_expcard {
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+
+            div {
+                width: 100%;
+
+                h3 {
+                    position: static;
+                    text-align: right;
+                }
+            }
+        }
+
+        &_langcard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+
+            img {
+                height: 100px;
+                width: 100px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .cv {
+        flex-direction: column;
+
+        &_head {
+
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            animation: Up 2s ease-out forwards;
+
+            h1 {
+                width: 100%;
+                text-align: left;
+            }
+
+            &_p {
+                width: 60%;
+                margin: 0;
+                text-align: left;
+                margin-bottom: 20px;
+                padding-left: 20px;
+            }
+
+            img {
+                position: absolute;
+                top: 60px;
+                right: 0px;
+                width: 180px;
+                height: 240px;
+            }
+
+            &_ph {
+                width: 80%;
+                margin-left: 20px;
+                margin-top: 20vw;
+                margin-bottom: 10px;
+            }
+
+            &_pq {
+                width: 80%;
+                margin-left: 20%;
+                margin-right: 0px;
+            }
+
+        }
+
+        &_nav {
+            width: 100%;
+            height: auto;
+
+            position: static;
+            top: 0px;
+            padding: 20px;
+        }
+
+        &_cont {
+            width: 100%;
+            gap: 20px
+        }
+
+        &_art {
+            padding: 20px;
+            gap: 10px;
+
+            &_row {
+                justify-content: space-evenly;
+            }
+
+            h1 {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                row-gap: 5px;
+
+                li.h3 {
+                    width: 100%;
+                }
+
+                li.h4 {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &_expcard {
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+            }
+
+            div {
+                width: 100%;
+
+                h3 {
+                    position: static;
+                    text-align: right;
+                }
+            }
+        }
+
+        &_langcard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                height: 100px;
+                width: 100px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

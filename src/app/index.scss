@@ -1,0 +1,185 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    text-align: start;
+}
+
+body {
+    // background-color: #FBF1E9;
+    
+    background-color: #FBF1E9;
+    scroll-behavior: smooth;
+    // height: 200vh;
+
+    width: 100vw;
+    // overflow: hidden;
+    // position: sticky;
+    // top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//otros
+
+.black_screen {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2d2a26;
+    opacity: 0.5;
+}
+
+//Contenedores
+
+.master {
+    width: 100vw;
+    min-height: calc(100vh + 40px);
+    // overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    // top: -40px;
+    // animation: slideUp 1.5s ease forwards;
+    background-color: #FBF1E9;
+    z-index: 2;
+
+}
+
+.none {
+    width: 100vw;
+    overflow: hidden;
+}
+
+// animation: slideUp 1.5s ease forwards;
+@keyframes slideUp {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+.main {
+    width: calc(100% - 3vw);
+    min-height: calc(100vh - 3vw);
+    margin: 1.5vw;
+    border-radius: 1.5vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F6E4D3;
+    z-index: 5; 
+}
+
+.back {
+    width: calc(100% - 3vw);
+    min-height: calc(100vh - 3vw);
+    margin: 1.5vw;
+    border-radius: 1.5vw;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F6E4D3;
+    z-index: 0;
+    position: absolute;
+    // animation-name: stepback;
+    // animation-duration: 1.5s;
+}
+
+// @keyframes stepback{
+//   0%{
+//     // transform-origin: top center;
+//     transform: scale(1);
+//   }
+//   100%{
+//     // transform-origin: top center;
+//     transform: scale(0.9)
+//   }
+// }
+
+
+// Barra Navegación
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.simplebar-scrollbar::before {
+    background: linear-gradient(150deg,
+            rgba(135, 206, 235, 1) 20%,
+            rgba(70, 130, 180, 1) 100%) !important;
+}
+
+.simplebar-track {
+    border-radius: 10px;
+}
+
+.simplebar-content-wrapper {
+    height: 70vh;
+    width: 80vw;
+}
+
+@media (max-width: 480px) {
+
+    .main {
+        width: calc(100% - 40px);
+        min-height: calc(100vh - 40px);
+        margin: 20px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .back {
+        width: calc(100% - 40px);
+        min-height: calc(100vh - 40px);
+        margin: 20px;
+        border-radius: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #F6E4D3;
+        z-index: 0;
+
+        position: absolute;
+        // animation-name: stepback;
+        // animation-duration: 1.5s;
+    }
+
+    .nav {
+        &_intro {
+            position: fixed;
+            bottom: 40px;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            z-index: 10;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+    }
+
+}

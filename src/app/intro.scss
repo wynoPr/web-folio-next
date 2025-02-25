@@ -1,0 +1,75 @@
+.intro {
+    height: calc(100vh - 3vw);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+
+    &_canva {
+        width: calc(100%);
+        height: calc(100%);
+    }
+
+    &_info {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-top: 10vh;
+        border-radius: 1.5vw;
+        backdrop-filter: blur(30px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_logo {
+        width: 30%;
+        object-fit: contain;
+        transition: width 0.7 ease;
+    }
+    &_title {
+        width: 60%;
+        margin-top: 20px;
+        animation: Up 2s ease-out forwards;
+        animation-delay: 0.5s;
+        text-align: center;
+
+    }
+    &_head {
+
+        width: 30%;
+        margin-top: 20px;
+        margin-bottom: 20vh;
+        animation: Up 2s ease-out forwards;
+        animation-delay: 0.5s;
+        text-align: center;
+
+    }
+}
+
+.svg {
+    fill: #2d2a26;
+
+}
+
+canvas {
+    display: block;
+    background-color: #FFD292;
+
+    border-radius: 1.5vw;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+}
+
+
+  @media (max-width: 480px) {
+    .intro{
+    height: calc(100vh - 40px) ;
+    &_logo{
+        width: 60%;
+    }
+}
+  }
