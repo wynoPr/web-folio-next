@@ -21,6 +21,15 @@ export const Navy = () => {
         }
       }
     }, [params.id]);
+
+    useEffect(() => {
+    
+      return () => {
+        sessionStorage.setItem('lastPosition', location);
+        sessionStorage.setItem('scrollPosition', window.scrollY.toString())
+      }
+    }, [location])
+    
     
 
   return (

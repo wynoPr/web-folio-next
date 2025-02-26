@@ -32,13 +32,20 @@ interface WorkViewerProps {
 export const WorkViewer = ({ data }: WorkViewerProps) => {
 
   const [isClosing, setIsClosing] = useState(false);
-
-  const router = useRouter()
   
+  const router = useRouter()
+
     const handleGoBack = () => {
       setIsClosing(true)
       setTimeout(() => {
-        router.back();
+        if(sessionStorage.getItem('lastPosition') == '/work'){
+          router.back();
+          
+          console.log('uso back');
+          
+        } else {
+          router.push('/work')
+        }
       }, 700);
 
       
@@ -57,7 +64,7 @@ export const WorkViewer = ({ data }: WorkViewerProps) => {
                 width="560"
                 height="315"
                 style={{ pointerEvents: "none" }}
-                src={`${data.photos[1].url}?autoplay=1&mute=1&loop=1&controls=0&vq=hd1080`}
+                src={`${data.photos[1].url}?autoplay=1&mute=1&loop=1&controls=0&vq=hd1080&playlist=${data.photos[1].url.match(/embed\/([^?]+)/)?.[1] || ""}`}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="autoplay; encrypted-media; picture-in-picture; web-share"
