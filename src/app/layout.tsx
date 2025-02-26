@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import './index.scss'
 import './fonts.scss'
 import { Navy } from "@/components/navy/Navy";
